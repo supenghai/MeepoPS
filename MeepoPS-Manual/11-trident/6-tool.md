@@ -26,7 +26,8 @@ Trident提供了一些工具方法, 可以更加方便的构建业务。如群�
 - 名称: \MeepoPS\Core\Trident\AppBusiness::sendToOne();
 - 参数1: string 参数$message是消息内容。
 - 参数2: string 参数$clientId是接收方的用户ID。
-- 返回: bool
+- 返回: bool|int
+- 返回值说明: $clientId为假、发送失败时返回false, 拒绝发送为0, 发送成功为发送成功的数据长度. 部分成功则是成功发送的长度, 加入待发送缓冲区延迟发送为-1。
 - 描述: 给指定的某个用户发送消息。
 
 ###### 示例:
