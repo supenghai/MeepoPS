@@ -644,7 +644,7 @@ class MeepoPS
     {
         //接收一个链接
         $connect = @stream_socket_accept($socket, 0, $peerName);
-        //false可能是惊群问题.但是在较新(13年下半年开始)的Linux内核已经解决了此问题.
+        //false可能是惊群问题.但是在较新(13年下半年开始)的Linux(2.6)内核已经解决了此问题.
         if ($connect === false) {
             return;
         }
